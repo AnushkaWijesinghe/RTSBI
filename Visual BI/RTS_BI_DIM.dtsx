@@ -1,0 +1,2484 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/15/2019 2:02:58 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VN-SRV01"
+  DTS:CreatorName="VN\VisualNext03"
+  DTS:DTSID="{4CA51FF6-0400-4B87-9B7D-396088AF549F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="RTS_BI_DIM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{CCBB4572-3DCD-4B5D-9063-E39F2D5CC747}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RTS BI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7E03D91B-18B2-457B-9368-52B3C91F5281}"
+      DTS:ObjectName="RTS BI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=VN-SRV01;User ID=v2k;Initial Catalog=RTS BI;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABLrUZJzLSmVdSQ7GWDPu4CAAAAAASAAACgAAAAEAAAAOH7KOE6+c9h78PGz8Yiu/4QAAAAjC5fy5wTtlX30xJJLlSYcRQAAABlVdzLkKeD15KroLg8nsEJHjVhNg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RTS Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6F85AA14-E9A0-4E76-9AC0-B0E049E3CD7C}"
+      DTS:ObjectName="RTS Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=VN-SRV01;User ID=v2k;Initial Catalog=RTS_Staging;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACy60FfG587LXD7AMI39MeuAAAAAASAAACgAAAAEAAAABX4UxyMdgyLYm3d4UON33YQAAAAIJJgOV6JeN5lVPX/02kAchQAAABcx193Qi1ginyWncmPwkUsa5MROw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DimProducts"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6CABAD53-D5C1-482D-A403-D026E1007D08}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimProducts"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DimProducts\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimProducts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProducts\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RTS BI]"
+                  connectionManagerRefId="Package.ConnectionManagers[RTS BI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProductCode"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[ProductCode]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[WarehouseName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="WarehouseName"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[WarehouseName]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[SizeName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="SizeName"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SizeName]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeName]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].Columns[SizeOrder]"
+                      cachedDataType="i4"
+                      cachedName="SizeOrder"
+                      externalMetadataColumnId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SizeOrder]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      name="WarehouseName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      name="SizeName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SizeOrder]"
+                      dataType="i4"
+                      name="SizeOrder" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProducts\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProductCode"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[ProductCode]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Description"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Color"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[WarehouseName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="WarehouseName"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[WarehouseName]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Category"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[ProductId]"
+                      cachedDataType="i4"
+                      cachedName="ProductId"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[ProductId]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[SizeName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="SizeName"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeName]" />
+                    <inputColumn
+                      refId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[SizeOrder]"
+                      cachedDataType="i4"
+                      cachedName="SizeOrder"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeOrder]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[IsActive]"
+                      dataType="bool"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[IsActive]"
+                      name="IsActive">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[IsActive]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[ProductCode]"
+                      name="ProductCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[ProductCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Description]"
+                      name="Description">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Color]"
+                      name="Color">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Color]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]"
+                      name="WarehouseName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[WarehouseName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Category]"
+                      name="Category">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Left Input].Columns[Category]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Id]"
+                      name="Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeName]"
+                      name="SizeName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[SizeName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]"
+                      name="SizeOrder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\DimProducts\Merge Join.Inputs[Merge Join Right Input].Columns[SizeOrder]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[DimProducts] SET [Category] = ?,[Color] = ?,[Description] = ?,[IsActive] = ?,[ProductCode] = ?,[SizeName] = ?,[SizeOrder] = ?,[WarehouseName] = ? WHERE [Id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProducts\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RTS BI]"
+                  connectionManagerRefId="Package.ConnectionManagers[RTS BI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProductCode"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[ProductCode]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[SizeName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="SizeName"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeName]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[SizeOrder]"
+                      cachedDataType="i4"
+                      cachedName="SizeOrder"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]" />
+                    <inputColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].Columns[WarehouseName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="WarehouseName"
+                      externalMetadataColumnId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="bool"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="wstr"
+                      length="200"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Product Details"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Product Details"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgProductDetails]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProducts\Product Details.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RTS Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[RTS Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[ProductId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ProductId]"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[ProductId]"
+                      name="ProductId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[SizeName]"
+                      length="200"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeName]"
+                      name="SizeName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeOrder]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[SizeOrder]"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeOrder]"
+                      name="SizeOrder"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ProductId]"
+                      dataType="i4"
+                      name="ProductId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ErpProductId]"
+                      dataType="i4"
+                      name="ErpProductId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[BarCode]"
+                      dataType="wstr"
+                      length="200"
+                      name="BarCode" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[UPC]"
+                      dataType="wstr"
+                      length="200"
+                      name="UPC" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[IPC]"
+                      dataType="wstr"
+                      length="200"
+                      name="IPC" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ErpProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      name="ErpProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ErpProductColorId]"
+                      dataType="i4"
+                      name="ErpProductColorId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ErpProductColorName]"
+                      dataType="wstr"
+                      length="200"
+                      name="ErpProductColorName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      name="SizeName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[SizeOrder]"
+                      dataType="i4"
+                      name="SizeOrder" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[DefaultUnitCost]"
+                      dataType="numeric"
+                      name="DefaultUnitCost"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[AvgUnitCost]"
+                      dataType="numeric"
+                      name="AvgUnitCost"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[TotalProductionQty]"
+                      dataType="numeric"
+                      name="TotalProductionQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[QtyReceived]"
+                      dataType="numeric"
+                      name="QtyReceived"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[DefaultProductionTime]"
+                      dataType="r8"
+                      name="DefaultProductionTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[AvgProductionTime]"
+                      dataType="r8"
+                      name="AvgProductionTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[TotalDamageQty]"
+                      dataType="numeric"
+                      name="TotalDamageQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[TotalUsedQty]"
+                      dataType="numeric"
+                      name="TotalUsedQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[TotalLeftQty]"
+                      dataType="numeric"
+                      name="TotalLeftQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ShortOrOverQty]"
+                      dataType="numeric"
+                      name="ShortOrOverQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].ExternalColumns[ImageIds]"
+                      dataType="wstr"
+                      length="200"
+                      name="ImageIds" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ProductId]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[ProductId]"
+                      name="ProductId" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[SizeName]"
+                      name="SizeName" />
+                    <outputColumn
+                      refId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[SizeOrder]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Error Output].Columns[SizeOrder]"
+                      name="SizeOrder" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Products"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Products"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgProducts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProducts\Products.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RTS Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[RTS Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Products.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      name="IsActive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ProductCode]"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[ProductCode]"
+                      name="ProductCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Color]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Color]"
+                      name="Color"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[WarehouseName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[WarehouseName]"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[WarehouseName]"
+                      name="WarehouseName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ErpProductId]"
+                      dataType="i4"
+                      name="ErpProductId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ErpColorId]"
+                      dataType="i4"
+                      name="ErpColorId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ErpProductColorId]"
+                      dataType="i4"
+                      name="ErpProductColorId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[WarehouseId]"
+                      dataType="i4"
+                      name="WarehouseId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      name="WarehouseName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Dimension]"
+                      dataType="wstr"
+                      length="200"
+                      name="Dimension" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[DimensionDetailID]"
+                      dataType="i4"
+                      name="DimensionDetailID" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[DefaultUnitCost]"
+                      dataType="numeric"
+                      name="DefaultUnitCost"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[AvgUnitCost]"
+                      dataType="numeric"
+                      name="AvgUnitCost"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalProductionQty]"
+                      dataType="i4"
+                      name="TotalProductionQty" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[DefaultProductionTime]"
+                      dataType="r8"
+                      name="DefaultProductionTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[AvgProductionTime]"
+                      dataType="r8"
+                      name="AvgProductionTime" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalDamageQty]"
+                      dataType="numeric"
+                      name="TotalDamageQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalUsedQty]"
+                      dataType="numeric"
+                      name="TotalUsedQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalLeftQty]"
+                      dataType="numeric"
+                      name="TotalLeftQty"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalDelivery]"
+                      dataType="numeric"
+                      name="TotalDelivery"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[TotalReceived]"
+                      dataType="numeric"
+                      name="TotalReceived"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ImageIds]"
+                      dataType="wstr"
+                      length="200"
+                      name="ImageIds" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[IntegrationId]"
+                      dataType="wstr"
+                      length="200"
+                      name="IntegrationId" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[ErpSynchKey]"
+                      dataType="wstr"
+                      length="200"
+                      name="ErpSynchKey" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Output].ExternalColumns[AllowEditProductSize]"
+                      dataType="bool"
+                      name="AllowEditProductSize" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      dataType="bool"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      name="IsActive" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[ProductCode]"
+                      name="ProductCode" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Color]"
+                      name="Color" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[WarehouseName]"
+                      name="WarehouseName" />
+                    <outputColumn
+                      refId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      name="Category" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [Category], [Color], [Description], [Id], [IsActive], [ProductCode], [SizeName], [SizeOrder], [WarehouseName] FROM [dbo].[DimProducts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DimProducts\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RTS BI]"
+                  connectionManagerRefId="Package.ConnectionManagers[RTS BI]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Category]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Category]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Color]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Color]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Description]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Description]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Id]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[IsActive]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[IsActive]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProductCode"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductCode]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[ProductCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[SizeName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="SizeName"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SizeName]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[SizeOrder]"
+                      cachedDataType="i4"
+                      cachedName="SizeOrder"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SizeOrder]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[WarehouseName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="WarehouseName"
+                      externalMetadataColumnId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[WarehouseName]"
+                      lineageId="Package\DimProducts\Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      name="SizeName" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SizeOrder]"
+                      dataType="i4"
+                      name="SizeOrder" />
+                    <externalMetadataColumn
+                      refId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      name="WarehouseName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DimProducts\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[IsActive]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProductCode"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[ProductCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Description"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Description]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[Color]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Color"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Color]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[WarehouseName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="WarehouseName"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[WarehouseName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort.Inputs[Sort Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Category"
+                      lineageId="Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Id]"
+                      name="Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[IsActive]"
+                      dataType="bool"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[IsActive]"
+                      name="IsActive">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[IsActive]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[ProductCode]"
+                      name="ProductCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[ProductCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Description]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Description]"
+                      name="Description">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Color]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Color]"
+                      name="Color">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Color]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[WarehouseName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[WarehouseName]"
+                      name="WarehouseName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[WarehouseName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Category]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort.Outputs[Sort Output].Columns[Category]"
+                      name="Category">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Products.Outputs[OLE DB Source Output].Columns[Category]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DimProducts\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DimProducts\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort 1.Inputs[Sort Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort 1.Inputs[Sort Input].Columns[ProductId]"
+                      cachedDataType="i4"
+                      cachedName="ProductId"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[ProductId]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort 1.Inputs[Sort Input].Columns[SizeName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="SizeName"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DimProducts\Sort 1.Inputs[Sort Input].Columns[SizeOrder]"
+                      cachedDataType="i4"
+                      cachedName="SizeOrder"
+                      lineageId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeOrder]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DimProducts\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[Id]"
+                      name="Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[ProductId]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[ProductId]"
+                      name="ProductId"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[ProductId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeName]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeName]"
+                      name="SizeName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeOrder]"
+                      dataType="i4"
+                      lineageId="Package\DimProducts\Sort 1.Outputs[Sort Output].Columns[SizeOrder]"
+                      name="SizeOrder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DimProducts\Product Details.Outputs[OLE DB Source Output].Columns[SizeOrder]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DimProducts.Paths[Changing Attribute Updates Output]"
+              endId="Package\DimProducts\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\DimProducts\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\DimProducts.Paths[Merge Join Output]"
+              endId="Package\DimProducts\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+              name="Merge Join Output"
+              startId="Package\DimProducts\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\DimProducts.Paths[New Output]"
+              endId="Package\DimProducts\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\DimProducts\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
+              refId="Package\DimProducts.Paths[OLE DB Source Output]"
+              endId="Package\DimProducts\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\DimProducts\Products.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DimProducts.Paths[OLE DB Source Output1]"
+              endId="Package\DimProducts\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\DimProducts\Product Details.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DimProducts.Paths[Sort Output]"
+              endId="Package\DimProducts\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\DimProducts\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\DimProducts.Paths[Sort Output1]"
+              endId="Package\DimProducts\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\DimProducts\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\DimProducts"
+          TopLeft="52,38" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DimProducts">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="120,42"
+          Id="Package\DimProducts\Products"
+          TopLeft="231,22.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DimProducts\Product Details"
+          TopLeft="453,22.5" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\DimProducts\Sort"
+          TopLeft="242,121.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[OLE DB Source Output]"
+          TopLeft="291,64.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\DimProducts\Sort 1"
+          TopLeft="476.5,123.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[OLE DB Source Output1]"
+          TopLeft="529,64.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\DimProducts\Merge Join"
+          TopLeft="348,224.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[Sort Output]"
+          TopLeft="291,163.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101.666666666667,61"
+              Start="0,0"
+              End="101.666666666667,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1550151975684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.1550151975684"
+                    Point2="0,36.1550151975684"
+                    Point3="4,36.1550151975684" />
+                  <mssgle:LineSegment
+                    End="97.6666666666667,36.1550151975684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97.6666666666667,36.1550151975684"
+                    Point2="101.666666666667,36.1550151975684"
+                    Point3="101.666666666667,40.1550151975684" />
+                  <mssgle:LineSegment
+                    End="101.666666666667,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[Sort Output1]"
+          TopLeft="530,165.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-96.6666666666667,59"
+              Start="0,0"
+              End="-96.6666666666667,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.9696048632219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.9696048632219"
+                    Point2="0,34.9696048632219"
+                    Point3="-4,34.9696048632219" />
+                  <mssgle:LineSegment
+                    End="-92.6666666666667,34.9696048632219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92.6666666666667,34.9696048632219"
+                    Point2="-96.6666666666667,34.9696048632219"
+                    Point3="-96.6666666666667,38.9696048632219" />
+                  <mssgle:LineSegment
+                    End="-96.6666666666667,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DimProducts\Slowly Changing Dimension"
+          TopLeft="303.5,325.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[Merge Join Output]"
+          TopLeft="410.5,266.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DimProducts\Insert Destination"
+          TopLeft="147.5,427.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[New Output]"
+          TopLeft="374.5,367.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-145.5,60"
+              Start="0,0"
+              End="-145.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-141.5,24.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-141.5,24.2735042735043"
+                    Point2="-145.5,24.2735042735043"
+                    Point3="-145.5,28.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-145.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.84138671875,29.2735042735043,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DimProducts\OLE DB Command"
+          TopLeft="504,428.5" />
+        <EdgeLayout
+          Id="Package\DimProducts.Paths[Changing Attribute Updates Output]"
+          TopLeft="441.5,367.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.5,61"
+              Start="0,0"
+              End="145.5,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6780626780627" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6780626780627"
+                    Point2="0,24.6780626780627"
+                    Point3="4,24.6780626780627" />
+                  <mssgle:LineSegment
+                    End="141.5,24.6780626780627" />
+                  <mssgle:CubicBezierSegment
+                    Point1="141.5,24.6780626780627"
+                    Point2="145.5,24.6780626780627"
+                    Point3="145.5,28.6780626780627" />
+                  <mssgle:LineSegment
+                    End="145.5,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-5.78390625000006,29.6780626780627,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProducts\Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProducts\Product Details">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimProducts\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{7E03D91B-18B2-457B-9368-52B3C91F5281}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimProducts]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[Category]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Category&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[Color]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Color&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[Description]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Description&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[Id]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Id&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[IsActive]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;IsActive&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[ProductCode]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductCode&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[SizeName]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;SizeName&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[SizeOrder]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;SizeOrder&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Merge Join.Outputs[Merge Join Output].Columns[WarehouseName]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;WarehouseName&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;true&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
