@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="RTS_BI_Stage"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{B6D1A400-1431-4DCF-9FFC-2AECE073F1D4}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{70B24185-2106-4A28-AB19-7564306E35B7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADx8Uhp9pF49XmXu8y8eWPSAAAAAASAAACgAAAAEAAAAIyqIfEZ7JGUlkFJNqIlX1AQAAAAbTT/VDr4tLeWVFl5Rmy45BQAAADRa0/q5Kjyhpptng2qG+izPfUaqQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA0na26PUkrSoEnTg90a7ReAAAAAASAAACgAAAAEAAAACMdi5/Y99vHOpLjyu9+8ycQAAAAGfQVFthP8Z3m6eRc5kNufxQAAADALSuVYI3qivMTpFC8vrmzzOscpA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABrovcrAVi/CAosBllHpA7yAAAAAASAAACgAAAAEAAAAF16bvRJJ9mxZNjVisuo+OAQAAAAZn8gAgymsMUux2GTX7LUGBQAAACUbdhylTcn3+wMYUHqdeOwUQ3DnA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAj42a8mbX0XvQDNfiDnRxoAAAAAASAAACgAAAAEAAAAI+dvEn5i3ZxLN8xdGvSVdAQAAAA2ROAAY7F3Iv74Po+0T0x2xQAAADj4ku2xjFZKiUqv0+BkWZEUBumNg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -20596,6 +20596,546 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\StgTeams"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{996F3868-7B42-4700-837B-B38C8777662D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="StgTeams"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\StgTeams\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgTeams]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgTeams\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VISUAL RTS STG]"
+                  connectionManagerRefId="Package.ConnectionManagers[VISUAL RTS STG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Code]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TeamName]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="TeamName"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamName]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamName]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TeamDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="TeamDescription"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamDescription]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamDescription]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedTimeAPP]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedTimeAPP"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedTimeAPP]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LastModifiedTimeAPP]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastModifiedTimeAPP"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModifiedTimeAPP]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeleteTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DeleteTime"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeleteTime]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SysGuid]"
+                      cachedDataType="guid"
+                      cachedName="SysGuid"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SysGuid]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TeamLeaderId]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="TeamLeaderId"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamLeaderId]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamLeaderId]" />
+                    <inputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ZoneAreaId]"
+                      cachedDataType="i4"
+                      cachedName="ZoneAreaId"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZoneAreaId]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[ZoneAreaId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      dataType="wstr"
+                      length="200"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamName]"
+                      dataType="wstr"
+                      length="200"
+                      name="TeamName" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamDescription]"
+                      dataType="wstr"
+                      length="200"
+                      name="TeamDescription" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TeamLeaderId]"
+                      dataType="wstr"
+                      length="200"
+                      name="TeamLeaderId" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ZoneAreaId]"
+                      dataType="i4"
+                      name="ZoneAreaId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\StgTeams\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\StgTeams\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Teams]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgTeams\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VISUAL RTS]"
+                  connectionManagerRefId="Package.ConnectionManagers[VISUAL RTS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      length="200"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code]"
+                      name="Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamName]"
+                      length="200"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamName]"
+                      name="TeamName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamDescription]"
+                      length="200"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamDescription]"
+                      name="TeamDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      name="IsActive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]"
+                      name="CreatedTimeAPP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]"
+                      name="LastModifiedTimeAPP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]"
+                      name="DeleteTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]"
+                      name="SysGuid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamLeaderId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamLeaderId]"
+                      length="200"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[TeamLeaderId]"
+                      name="TeamLeaderId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[ZoneAreaId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ZoneAreaId]"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].Columns[ZoneAreaId]"
+                      name="ZoneAreaId"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code]"
+                      dataType="nText"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamName]"
+                      dataType="nText"
+                      name="TeamName" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamDescription]"
+                      dataType="nText"
+                      name="TeamDescription" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TeamLeaderId]"
+                      dataType="nText"
+                      name="TeamLeaderId" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QRCodeImageBase64]"
+                      dataType="nText"
+                      name="QRCodeImageBase64" />
+                    <externalMetadataColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ZoneAreaId]"
+                      dataType="i4"
+                      name="ZoneAreaId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      dataType="nText"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code]"
+                      name="Code" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamName]"
+                      dataType="nText"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamName]"
+                      name="TeamName" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamDescription]"
+                      dataType="nText"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamDescription]"
+                      name="TeamDescription" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      dataType="bool"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      name="IsActive" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedTimeAPP]"
+                      name="CreatedTimeAPP" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastModifiedTimeAPP]"
+                      name="LastModifiedTimeAPP" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeleteTime]"
+                      name="DeleteTime" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SysGuid]"
+                      dataType="guid"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SysGuid]"
+                      name="SysGuid" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamLeaderId]"
+                      dataType="nText"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TeamLeaderId]"
+                      name="TeamLeaderId" />
+                    <outputColumn
+                      refId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ZoneAreaId]"
+                      dataType="i4"
+                      lineageId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ZoneAreaId]"
+                      name="ZoneAreaId" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\StgTeams.Paths[OLE DB Source Output]"
+              endId="Package\StgTeams\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\StgTeams\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\StgWorkflowDetails"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -27248,11 +27788,7 @@
 ,[WorkRecords].[AccessToken]
 ,[WorkRecords].[VersionInfo]
 from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
-join(
-	select id filterId
-	from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
-	where cast(LastModifiedTimeAPP as date) between cast((getdate() -2) as date) and cast(getdate() as date)
-)k on filterId = id</property>
+--where cast([WorkRecords].LastModifiedTimeAPP as date) between cast--((getdate() -2) as date) and cast(getdate() as date)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -29063,7 +29599,7 @@ join(
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4C3FF3AB-4832-4CDC-B7F7-2484F8AF89FB}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes&#xA;TRUNCATE TABLE StgTeams" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -29229,6 +29765,14 @@ join(
       DTS:ObjectName="Constraint 23"
       DTS:To="Package\StgMachineDetails" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 24]"
+      DTS:CreationName=""
+      DTS:DTSID="{76266406-60AA-473A-B941-7625D489ED1A}"
+      DTS:From="Package\StgOperationTypes"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 24"
+      DTS:To="Package\StgTeams" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{6BF2E994-1878-4739-832A-84F27697EC58}"
@@ -29346,9 +29890,137 @@ join(
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="163,42"
+          Id="Package\Delete from StgWorkRecords"
+          TopLeft="821,280" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgBundlePlannings"
+          TopLeft="321,390" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\StgBundles"
+          TopLeft="557,392" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\StgCity"
+          TopLeft="89,702" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\StgCountry"
+          TopLeft="79,601" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\StgEmployee"
+          TopLeft="333,705" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\StgEmployeeDailyActivities"
+          TopLeft="533,498" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\StgEmployeeDailyActivityDetails"
+          TopLeft="779,498" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\StgLine"
+          TopLeft="574,703" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\StgLineEmployeeDetails"
+          TopLeft="800,601" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\StgLineMachineDetails"
+          TopLeft="59,390" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\StgLineOperationDetails"
+          TopLeft="317,601" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\StgLineTeamDetails"
+          TopLeft="63,498" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\StgLocationDetails"
+          TopLeft="805,704" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\StgMachineDetails"
+          TopLeft="803,805" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\StgMachines"
+          TopLeft="584,808" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\StgMachineTypeDetails"
+          TopLeft="316,806" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\StgMachineTypes"
+          TopLeft="75,806" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\StgOperationLibraries"
+          TopLeft="563,602" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\StgOperations"
+          TopLeft="86,920" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\StgOperationTypes"
+          TopLeft="316,920" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\StgProductDetails"
+          TopLeft="557,41" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\StgProductionDetails"
+          TopLeft="813,40" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\StgProductions"
+          TopLeft="830,160" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\StgProductOperationDetails"
+          TopLeft="539,162" />
+        <NodeLayout
           Size="135,42"
           Id="Package\StgProducts"
           TopLeft="332,41" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\StgWorkflowDetails"
+          TopLeft="61,161" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\StgWorkflows"
+          TopLeft="331,162" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\StgWorkOperationDetails"
+          TopLeft="48,279" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\StgWorkOperationHeaders"
+          TopLeft="304,279" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\StgWorkOrderDetails"
+          TopLeft="559,279" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\StgWorkRecords"
+          TopLeft="821,392" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\StgZoneAreas"
+          TopLeft="327,497" />
         <NodeLayout
           Size="195,42"
           Id="Package\Truncate Staging tables"
@@ -29375,10 +30047,6 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\StgProductDetails"
-          TopLeft="557,41" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="467,62">
@@ -29401,570 +30069,6 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\StgProductionDetails"
-          TopLeft="813,40" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="719,61.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="94,0"
-              Start="0,0"
-              End="86.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="86.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="149,42"
-          Id="Package\StgProductions"
-          TopLeft="830,160" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="902.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78"
-              Start="0,0"
-              End="0,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,42"
-          Id="Package\StgProductOperationDetails"
-          TopLeft="539,162" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="830,182">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-83,0"
-              Start="0,0"
-              End="-75.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-75.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="143,42"
-          Id="Package\StgWorkflows"
-          TopLeft="331,162" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="539,183">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-65,0"
-              Start="0,0"
-              End="-57.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-57.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\StgWorkflowDetails"
-          TopLeft="61,161" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="331,182.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-100,0"
-              Start="0,0"
-              End="-92.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-92.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\StgWorkOperationDetails"
-          TopLeft="48,279" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="146.25,203">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76"
-              Start="0,0"
-              End="0,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\StgWorkOperationHeaders"
-          TopLeft="304,279" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="245,300">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59,0"
-              Start="0,0"
-              End="51.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="51.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\StgWorkOrderDetails"
-          TopLeft="559,279" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="508,300">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51,0"
-              Start="0,0"
-              End="43.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="43.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Delete from StgWorkRecords"
-          TopLeft="821,280" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="736,300.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85,0"
-              Start="0,0"
-              End="77.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="77.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\StgWorkRecords"
-          TopLeft="821,392" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="900.75,322">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70"
-              Start="0,0"
-              End="0,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\StgBundles"
-          TopLeft="557,392" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="821,413">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85,0"
-              Start="0,0"
-              End="-77.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-77.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgBundlePlannings"
-          TopLeft="321,390" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="557,412">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-65,0"
-              Start="0,0"
-              End="-57.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-57.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,42"
-          Id="Package\StgLineMachineDetails"
-          TopLeft="59,390" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="321,411">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78,0"
-              Start="0,0"
-              End="-70.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-70.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\StgLineTeamDetails"
-          TopLeft="63,498" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="150,432">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66"
-              Start="0,0"
-              End="0,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\StgZoneAreas"
-          TopLeft="327,497" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="235,518.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="92,0"
-              Start="0,0"
-              End="84.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="84.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\StgEmployeeDailyActivities"
-          TopLeft="533,498" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="471,518.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62,0"
-              Start="0,0"
-              End="54.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="229,42"
-          Id="Package\StgEmployeeDailyActivityDetails"
-          TopLeft="779,498" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="737,519">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42,0"
-              Start="0,0"
-              End="34.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="34.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="191,42"
-          Id="Package\StgLineEmployeeDetails"
-          TopLeft="800,601" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="894.5,540">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61"
-              Start="0,0"
-              End="0,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\StgOperationLibraries"
-          TopLeft="563,602" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="800,622.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-57,0"
-              Start="0,0"
-              End="-49.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-49.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\StgLineOperationDetails"
-          TopLeft="317,601" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="563,622.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-54,0"
-              Start="0,0"
-              End="-46.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-46.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="138,42"
-          Id="Package\StgCity"
-          TopLeft="89,702" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\StgCountry"
-          TopLeft="79,601" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\StgEmployee"
-          TopLeft="333,705" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\StgLine"
-          TopLeft="574,703" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\StgLocationDetails"
-          TopLeft="805,704" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\StgMachineDetails"
-          TopLeft="803,805" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\StgMachines"
-          TopLeft="584,808" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\StgMachineTypeDetails"
-          TopLeft="316,806" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\StgMachineTypes"
-          TopLeft="75,806" />
-        <NodeLayout
-          Size="145,42"
-          Id="Package\StgOperations"
-          TopLeft="86,920" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\StgOperationTypes"
-          TopLeft="316,920" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1 1]"
           TopLeft="154.75,643">
@@ -29979,6 +30083,28 @@ join(
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="736,300.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85,0"
+              Start="0,0"
+              End="77.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30010,6 +30136,226 @@ join(
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="900.75,322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="821,413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85,0"
+              Start="0,0"
+              End="-77.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-77.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="557,412">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65,0"
+              Start="0,0"
+              End="-57.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-57.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="321,411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78,0"
+              Start="0,0"
+              End="-70.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-70.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 15]"
+          TopLeft="150,432">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 16]"
+          TopLeft="235,518.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92,0"
+              Start="0,0"
+              End="84.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="84.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 17]"
+          TopLeft="471,518.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62,0"
+              Start="0,0"
+              End="54.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 18]"
+          TopLeft="737,519">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42,0"
+              Start="0,0"
+              End="34.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 19]"
+          TopLeft="894.5,540">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="719,61.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94,0"
+              Start="0,0"
+              End="86.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="86.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2 1]"
           TopLeft="227,724.5">
           <EdgeLayout.Curve>
@@ -30032,19 +30378,19 @@ join(
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3 1]"
-          TopLeft="489,725">
+          Id="Package.PrecedenceConstraints[Constraint 20]"
+          TopLeft="800,622.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85,0"
+              EndConnector="-57,0"
               Start="0,0"
-              End="77.5,0">
+              End="-49.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.5,0" />
+                    End="-49.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30054,107 +30400,19 @@ join(
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4 1]"
-          TopLeft="722,724.5">
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="563,622.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83,0"
+              EndConnector="-54,0"
               Start="0,0"
-              End="75.5,0">
+              End="-46.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="75.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6 1]"
-          TopLeft="803,827.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-81,0"
-              Start="0,0"
-              End="-73.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-73.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7 1]"
-          TopLeft="584,828">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-80,0"
-              Start="0,0"
-              End="-72.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-72.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8 1]"
-          TopLeft="316,827">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-80,0"
-              Start="0,0"
-              End="-72.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-72.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9 1]"
-          TopLeft="157,848">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72"
-              Start="0,0"
-              End="0,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.5" />
+                    End="-46.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30207,25 +30465,9 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\StgProducts">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgProducts\OLE DB Source"
-          TopLeft="169,68" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgProducts\OLE DB Destination"
-          TopLeft="153,188" />
         <EdgeLayout
-          Id="Package\StgProducts.Paths[OLE DB Source Output]"
-          TopLeft="241.25,110">
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="902.75,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -30245,62 +30487,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProducts\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProducts\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgProductDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgProductDetails\OLE DB Source"
-          TopLeft="172,71" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgProductDetails\OLE DB Destination"
-          TopLeft="168,195" />
         <EdgeLayout
-          Id="Package\StgProductDetails.Paths[OLE DB Source Output]"
-          TopLeft="250.25,113">
+          Id="Package.PrecedenceConstraints[Constraint 3 1]"
+          TopLeft="489,725">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,82"
+              EndConnector="85,0"
               Start="0,0"
-              End="0,74.5">
+              End="77.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.5" />
+                    End="77.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30309,62 +30509,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgProductionDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgProductionDetails\OLE DB Source"
-          TopLeft="184,70" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgProductionDetails\OLE DB Destination"
-          TopLeft="177,209" />
         <EdgeLayout
-          Id="Package\StgProductionDetails.Paths[OLE DB Source Output]"
-          TopLeft="260.75,112">
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="830,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,97"
+              EndConnector="-83,0"
               Start="0,0"
-              End="0,89.5">
+              End="-75.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.5" />
+                    End="-75.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30373,62 +30531,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductionDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductionDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgProductions">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgProductions\OLE DB Source"
-          TopLeft="183,61" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgProductions\OLE DB Destination"
-          TopLeft="178,196" />
         <EdgeLayout
-          Id="Package\StgProductions.Paths[OLE DB Source Output]"
-          TopLeft="260.75,103">
+          Id="Package.PrecedenceConstraints[Constraint 4 1]"
+          TopLeft="722,724.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,93"
+              EndConnector="83,0"
               Start="0,0"
-              End="0,85.5">
+              End="75.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,85.5" />
+                    End="75.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30437,62 +30553,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductions\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductions\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgProductOperationDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgProductOperationDetails\OLE DB Source"
-          TopLeft="243,63" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgProductOperationDetails\OLE DB Destination"
-          TopLeft="237,175" />
         <EdgeLayout
-          Id="Package\StgProductOperationDetails.Paths[OLE DB Source Output]"
-          TopLeft="320.25,105">
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="539,183">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,70"
+              EndConnector="-65,0"
               Start="0,0"
-              End="0,62.5">
+              End="-57.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62.5" />
+                    End="-57.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30501,62 +30575,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductOperationDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgProductOperationDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkflows">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkflows\OLE DB Source"
-          TopLeft="193,62" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkflows\OLE DB Destination"
-          TopLeft="187,192" />
         <EdgeLayout
-          Id="Package\StgWorkflows.Paths[OLE DB Source Output]"
-          TopLeft="270.25,104">
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="331,182.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88"
+              EndConnector="-100,0"
               Start="0,0"
-              End="0,80.5">
+              End="-92.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.5" />
+                    End="-92.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30565,62 +30597,20 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkflows\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkflows\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkflowDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkflowDetails\OLE DB Source"
-          TopLeft="181,86" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkflowDetails\OLE DB Destination"
-          TopLeft="171,219" />
         <EdgeLayout
-          Id="Package\StgWorkflowDetails.Paths[OLE DB Source Output]"
-          TopLeft="256.25,128">
+          Id="Package.PrecedenceConstraints[Constraint 6 1]"
+          TopLeft="803,827.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,91"
+              EndConnector="-81,0"
               Start="0,0"
-              End="0,83.5">
+              End="-73.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,83.5" />
+                    End="-73.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30629,179 +30619,9 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkflowDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkflowDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkOperationDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkOperationDetails\OLE DB Source"
-          TopLeft="150,40" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkOperationDetails\OLE DB Destination"
-          TopLeft="143,176" />
         <EdgeLayout
-          Id="Package\StgWorkOperationDetails.Paths[OLE DB Source Output]"
-          TopLeft="226.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,94"
-              Start="0,0"
-              End="0,86.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOperationDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOperationDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkOperationHeaders">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkOperationHeaders\OLE DB Source"
-          TopLeft="199,47" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkOperationHeaders\OLE DB Destination"
-          TopLeft="187,171" />
-        <EdgeLayout
-          Id="Package\StgWorkOperationHeaders.Paths[OLE DB Source Output]"
-          TopLeft="273.25,89">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,82"
-              Start="0,0"
-              End="0,74.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,74.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOperationHeaders\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOperationHeaders\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkOrderDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkOrderDetails\OLE DB Source"
-          TopLeft="207,39" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkOrderDetails\OLE DB Destination"
-          TopLeft="195,157" />
-        <EdgeLayout
-          Id="Package\StgWorkOrderDetails.Paths[OLE DB Source Output]"
-          TopLeft="281.25,81">
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="146.25,203">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -30821,62 +30641,134 @@ join(
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOrderDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkOrderDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgWorkRecords">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgWorkRecords\OLE DB Source"
-          TopLeft="185,69" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgWorkRecords\OLE DB Destination"
-          TopLeft="181,202" />
         <EdgeLayout
-          Id="Package\StgWorkRecords.Paths[OLE DB Source Output]"
-          TopLeft="263.25,111">
+          Id="Package.PrecedenceConstraints[Constraint 7 1]"
+          TopLeft="584,828">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,91"
+              EndConnector="-80,0"
               Start="0,0"
-              End="0,83.5">
+              End="-72.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,83.5" />
+                    End="-72.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="245,300">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,0"
+              Start="0,0"
+              End="51.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8 1]"
+          TopLeft="316,827">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-80,0"
+              Start="0,0"
+              End="-72.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-72.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="508,300">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,0"
+              Start="0,0"
+              End="43.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9 1]"
+          TopLeft="157,848">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72"
+              Start="0,0"
+              End="0,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="126,42"
+          Id="Package\StgTeams"
+          TopLeft="580,920" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 24]"
+          TopLeft="484,941">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96,0"
+              Start="0,0"
+              End="88.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="88.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -30887,102 +30779,12 @@ join(
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkRecords\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgWorkRecords\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgBundles">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgBundles\OLE DB Source"
-          TopLeft="204,74" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgBundles\OLE DB Destination"
-          TopLeft="192,238" />
-        <EdgeLayout
-          Id="Package\StgBundles.Paths[OLE DB Source Output]"
-          TopLeft="278.25,116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,122"
-              Start="0,0"
-              End="0,114.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,114.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgBundles\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgBundles\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  </Package>
   <TaskHost
     design-time-name="Package\StgBundlePlannings">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\StgBundlePlannings\OLE DB Source"
@@ -31010,25 +30812,14 @@ join(
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgBundlePlannings\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\StgBundlePlannings\OLE DB Destination">
     <Properties>
@@ -31042,59 +30833,8 @@ join(
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgLineMachineDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgLineMachineDetails\OLE DB Source"
-          TopLeft="277,62" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgLineMachineDetails\OLE DB Destination"
-          TopLeft="272,210" />
-        <EdgeLayout
-          Id="Package\StgLineMachineDetails.Paths[OLE DB Source Output]"
-          TopLeft="354.75,104">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,106"
-              Start="0,0"
-              End="0,98.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,98.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\StgLineMachineDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgLineMachineDetails\OLE DB Destination">
+    design-time-name="Package\StgBundlePlannings\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -31107,45 +30847,47 @@ join(
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\StgLineTeamDetails">
+    design-time-name="Package\StgBundles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
-          Id="Package\StgLineTeamDetails\OLE DB Source"
-          TopLeft="317,80" />
+          Id="Package\StgBundles\OLE DB Source"
+          TopLeft="204,74" />
         <NodeLayout
           Size="171,42"
-          Id="Package\StgLineTeamDetails\OLE DB Destination"
-          TopLeft="300,255" />
+          Id="Package\StgBundles\OLE DB Destination"
+          TopLeft="192,238" />
         <EdgeLayout
-          Id="Package\StgLineTeamDetails.Paths[OLE DB Source Output]"
-          TopLeft="388.75,122">
+          Id="Package\StgBundles.Paths[OLE DB Source Output]"
+          TopLeft="278.25,116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,133"
+              EndConnector="0,122"
               Start="0,0"
-              End="0,125.5">
+              End="0,114.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,125.5" />
+                    End="0,114.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\StgLineTeamDetails\OLE DB Source">
+    design-time-name="Package\StgBundles\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -31158,391 +30900,7 @@ join(
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\StgLineTeamDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgZoneAreas">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgZoneAreas\OLE DB Source"
-          TopLeft="174,103" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgZoneAreas\OLE DB Destination"
-          TopLeft="162,256" />
-        <EdgeLayout
-          Id="Package\StgZoneAreas.Paths[OLE DB Source Output]"
-          TopLeft="248.25,145">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,111"
-              Start="0,0"
-              End="0,103.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,103.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgZoneAreas\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgZoneAreas\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgEmployeeDailyActivities">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgEmployeeDailyActivities\OLE DB Source"
-          TopLeft="193,62" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgEmployeeDailyActivities\OLE DB Destination"
-          TopLeft="183,221" />
-        <EdgeLayout
-          Id="Package\StgEmployeeDailyActivities.Paths[OLE DB Source Output]"
-          TopLeft="268.25,104">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,117"
-              Start="0,0"
-              End="0,109.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,109.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgEmployeeDailyActivities\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgEmployeeDailyActivities\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgEmployeeDailyActivityDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgEmployeeDailyActivityDetails\OLE DB Source"
-          TopLeft="191,88" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgEmployeeDailyActivityDetails\OLE DB Destination"
-          TopLeft="178,250" />
-        <EdgeLayout
-          Id="Package\StgEmployeeDailyActivityDetails.Paths[OLE DB Source Output]"
-          TopLeft="264.75,130">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,120"
-              Start="0,0"
-              End="0,112.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,112.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgEmployeeDailyActivityDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgEmployeeDailyActivityDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgLineEmployeeDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgLineEmployeeDetails\OLE DB Source"
-          TopLeft="177,76" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgLineEmployeeDetails\OLE DB Destination"
-          TopLeft="159,245" />
-        <EdgeLayout
-          Id="Package\StgLineEmployeeDetails.Paths[OLE DB Source Output]"
-          TopLeft="248.25,118">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,127"
-              Start="0,0"
-              End="0,119.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,119.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgLineEmployeeDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgLineEmployeeDetails\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgOperationLibraries">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgOperationLibraries\OLE DB Source"
-          TopLeft="194,64" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgOperationLibraries\OLE DB Destination"
-          TopLeft="184,214" />
-        <EdgeLayout
-          Id="Package\StgOperationLibraries.Paths[OLE DB Source Output]"
-          TopLeft="269.25,106">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,108"
-              Start="0,0"
-              End="0,100.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,100.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgOperationLibraries\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgOperationLibraries\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\StgLineOperationDetails">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\StgLineOperationDetails\OLE DB Source"
-          TopLeft="215,96" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgLineOperationDetails\OLE DB Destination"
-          TopLeft="211,248" />
-        <EdgeLayout
-          Id="Package\StgLineOperationDetails.Paths[OLE DB Source Output]"
-          TopLeft="293.25,138">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,110"
-              Start="0,0"
-              End="0,102.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,102.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgLineOperationDetails\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StgLineOperationDetails\OLE DB Destination">
+    design-time-name="Package\StgBundles\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -31558,7 +30916,7 @@ join(
     design-time-name="Package\StgCity">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\StgCity\OLE DB Destination"
@@ -31598,9 +30956,7 @@ join(
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -31610,15 +30966,15 @@ join(
     design-time-name="Package\StgCountry">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgCountry\OLE DB Destination"
-          TopLeft="262,203" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\StgCountry\OLE DB Source"
           TopLeft="216,26" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgCountry\OLE DB Destination"
+          TopLeft="262,203" />
         <EdgeLayout
           Id="Package\StgCountry.Paths[OLE DB Source Output]"
           TopLeft="291,68">
@@ -31650,7 +31006,9 @@ join(
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -31662,13 +31020,13 @@ join(
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgEmployee\OLE DB Destination"
-          TopLeft="204,224" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgEmployee\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgEmployee\OLE DB Destination"
+          TopLeft="204,224" />
         <EdgeLayout
           Id="Package\StgEmployee.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -31709,18 +31067,150 @@ join(
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\StgEmployeeDailyActivities">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgEmployeeDailyActivities\OLE DB Source"
+          TopLeft="193,62" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgEmployeeDailyActivities\OLE DB Destination"
+          TopLeft="183,221" />
+        <EdgeLayout
+          Id="Package\StgEmployeeDailyActivities.Paths[OLE DB Source Output]"
+          TopLeft="268.25,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,117"
+              Start="0,0"
+              End="0,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgEmployeeDailyActivities\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgEmployeeDailyActivities\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgEmployeeDailyActivityDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgEmployeeDailyActivityDetails\OLE DB Source"
+          TopLeft="191,88" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgEmployeeDailyActivityDetails\OLE DB Destination"
+          TopLeft="178,250" />
+        <EdgeLayout
+          Id="Package\StgEmployeeDailyActivityDetails.Paths[OLE DB Source Output]"
+          TopLeft="264.75,130">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,120"
+              Start="0,0"
+              End="0,112.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,112.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgEmployeeDailyActivityDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgEmployeeDailyActivityDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\StgLine">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgLine\OLE DB Destination"
-          TopLeft="269,246" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgLine\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgLine\OLE DB Destination"
+          TopLeft="269,246" />
         <EdgeLayout
           Id="Package\StgLine.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -31760,6 +31250,270 @@ join(
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\StgLineEmployeeDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgLineEmployeeDetails\OLE DB Source"
+          TopLeft="177,76" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgLineEmployeeDetails\OLE DB Destination"
+          TopLeft="159,245" />
+        <EdgeLayout
+          Id="Package\StgLineEmployeeDetails.Paths[OLE DB Source Output]"
+          TopLeft="248.25,118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,127"
+              Start="0,0"
+              End="0,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineEmployeeDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineEmployeeDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgLineMachineDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgLineMachineDetails\OLE DB Source"
+          TopLeft="277,62" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgLineMachineDetails\OLE DB Destination"
+          TopLeft="272,210" />
+        <EdgeLayout
+          Id="Package\StgLineMachineDetails.Paths[OLE DB Source Output]"
+          TopLeft="354.75,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,106"
+              Start="0,0"
+              End="0,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineMachineDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineMachineDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgLineOperationDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgLineOperationDetails\OLE DB Destination"
+          TopLeft="211,248" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgLineOperationDetails\OLE DB Source"
+          TopLeft="215,96" />
+        <EdgeLayout
+          Id="Package\StgLineOperationDetails.Paths[OLE DB Source Output]"
+          TopLeft="293.25,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110"
+              Start="0,0"
+              End="0,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineOperationDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineOperationDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgLineTeamDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgLineTeamDetails\OLE DB Source"
+          TopLeft="317,80" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgLineTeamDetails\OLE DB Destination"
+          TopLeft="300,255" />
+        <EdgeLayout
+          Id="Package\StgLineTeamDetails.Paths[OLE DB Source Output]"
+          TopLeft="388.75,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,133"
+              Start="0,0"
+              End="0,125.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,125.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineTeamDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgLineTeamDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\StgLocationDetails">
     <LayoutInfo>
@@ -31818,13 +31572,13 @@ join(
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgMachineDetails\OLE DB Destination"
-          TopLeft="256,229" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgMachineDetails\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgMachineDetails\OLE DB Destination"
+          TopLeft="256,229" />
         <EdgeLayout
           Id="Package\StgMachineDetails.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -31870,13 +31624,13 @@ join(
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgMachines\OLE DB Destination"
-          TopLeft="255,217" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgMachines\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgMachines\OLE DB Destination"
+          TopLeft="255,217" />
         <EdgeLayout
           Id="Package\StgMachines.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -31922,13 +31676,13 @@ join(
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgMachineTypeDetails\OLE DB Destination"
-          TopLeft="269,280" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgMachineTypeDetails\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgMachineTypeDetails\OLE DB Destination"
+          TopLeft="269,280" />
         <EdgeLayout
           Id="Package\StgMachineTypeDetails.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -31974,13 +31728,13 @@ join(
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgMachineTypes\OLE DB Destination"
-          TopLeft="253,220" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgMachineTypes\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgMachineTypes\OLE DB Destination"
+          TopLeft="253,220" />
         <EdgeLayout
           Id="Package\StgMachineTypes.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -32021,18 +31775,84 @@ join(
     </LayoutInfo>
   </TaskHost>
   <TaskHost
+    design-time-name="Package\StgOperationLibraries">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgOperationLibraries\OLE DB Source"
+          TopLeft="194,64" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgOperationLibraries\OLE DB Destination"
+          TopLeft="184,214" />
+        <EdgeLayout
+          Id="Package\StgOperationLibraries.Paths[OLE DB Source Output]"
+          TopLeft="269.25,106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,108"
+              Start="0,0"
+              End="0,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgOperationLibraries\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgOperationLibraries\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\StgOperations">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\StgOperations\OLE DB Destination"
-          TopLeft="315,272" />
-        <NodeLayout
           Size="150,42"
           Id="Package\StgOperations\OLE DB Source"
           TopLeft="173,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgOperations\OLE DB Destination"
+          TopLeft="315,272" />
         <EdgeLayout
           Id="Package\StgOperations.Paths[OLE DB Source Output]"
           TopLeft="248,101">
@@ -32076,15 +31896,15 @@ join(
     design-time-name="Package\StgOperationTypes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\StgOperationTypes\OLE DB Destination"
-          TopLeft="320,224" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\StgOperationTypes\OLE DB Source"
           TopLeft="174,59" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgOperationTypes\OLE DB Destination"
+          TopLeft="320,224" />
         <EdgeLayout
           Id="Package\StgOperationTypes.Paths[OLE DB Source Output]"
           TopLeft="249,101">
@@ -32116,6 +31936,44 @@ join(
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\StgProductDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgProductDetails\OLE DB Source"
+          TopLeft="172,71" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgProductDetails\OLE DB Destination"
+          TopLeft="168,195" />
+        <EdgeLayout
+          Id="Package\StgProductDetails.Paths[OLE DB Source Output]"
+          TopLeft="250.25,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="0,0,0,0"
               RelativePosition="Any" />
@@ -32124,5 +31982,817 @@ join(
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgProductionDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgProductionDetails\OLE DB Source"
+          TopLeft="184,70" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgProductionDetails\OLE DB Destination"
+          TopLeft="177,209" />
+        <EdgeLayout
+          Id="Package\StgProductionDetails.Paths[OLE DB Source Output]"
+          TopLeft="260.75,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,97"
+              Start="0,0"
+              End="0,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductionDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductionDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgProductions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgProductions\OLE DB Source"
+          TopLeft="183,61" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgProductions\OLE DB Destination"
+          TopLeft="178,196" />
+        <EdgeLayout
+          Id="Package\StgProductions.Paths[OLE DB Source Output]"
+          TopLeft="260.75,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductions\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductions\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgProductOperationDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgProductOperationDetails\OLE DB Destination"
+          TopLeft="237,175" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgProductOperationDetails\OLE DB Source"
+          TopLeft="243,63" />
+        <EdgeLayout
+          Id="Package\StgProductOperationDetails.Paths[OLE DB Source Output]"
+          TopLeft="320.25,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductOperationDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProductOperationDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgProducts">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgProducts\OLE DB Source"
+          TopLeft="169,68" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgProducts\OLE DB Destination"
+          TopLeft="153,188" />
+        <EdgeLayout
+          Id="Package\StgProducts.Paths[OLE DB Source Output]"
+          TopLeft="241.25,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProducts\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgProducts\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkflowDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkflowDetails\OLE DB Source"
+          TopLeft="181,86" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkflowDetails\OLE DB Destination"
+          TopLeft="171,219" />
+        <EdgeLayout
+          Id="Package\StgWorkflowDetails.Paths[OLE DB Source Output]"
+          TopLeft="256.25,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkflowDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkflowDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkflows">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkflows\OLE DB Source"
+          TopLeft="193,62" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkflows\OLE DB Destination"
+          TopLeft="187,192" />
+        <EdgeLayout
+          Id="Package\StgWorkflows.Paths[OLE DB Source Output]"
+          TopLeft="270.25,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkflows\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkflows\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkOperationDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkOperationDetails\OLE DB Source"
+          TopLeft="150,40" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkOperationDetails\OLE DB Destination"
+          TopLeft="143,176" />
+        <EdgeLayout
+          Id="Package\StgWorkOperationDetails.Paths[OLE DB Source Output]"
+          TopLeft="226.75,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94"
+              Start="0,0"
+              End="0,86.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOperationDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOperationDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkOperationHeaders">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkOperationHeaders\OLE DB Source"
+          TopLeft="199,47" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkOperationHeaders\OLE DB Destination"
+          TopLeft="187,171" />
+        <EdgeLayout
+          Id="Package\StgWorkOperationHeaders.Paths[OLE DB Source Output]"
+          TopLeft="273.25,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOperationHeaders\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOperationHeaders\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkOrderDetails">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkOrderDetails\OLE DB Source"
+          TopLeft="207,39" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkOrderDetails\OLE DB Destination"
+          TopLeft="195,157" />
+        <EdgeLayout
+          Id="Package\StgWorkOrderDetails.Paths[OLE DB Source Output]"
+          TopLeft="281.25,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOrderDetails\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkOrderDetails\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgWorkRecords">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgWorkRecords\OLE DB Destination"
+          TopLeft="181,202" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgWorkRecords\OLE DB Source"
+          TopLeft="185,69" />
+        <EdgeLayout
+          Id="Package\StgWorkRecords.Paths[OLE DB Source Output]"
+          TopLeft="263.25,111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkRecords\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgWorkRecords\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgZoneAreas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgZoneAreas\OLE DB Source"
+          TopLeft="174,103" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgZoneAreas\OLE DB Destination"
+          TopLeft="162,256" />
+        <EdgeLayout
+          Id="Package\StgZoneAreas.Paths[OLE DB Source Output]"
+          TopLeft="248.25,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111"
+              Start="0,0"
+              End="0,103.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgZoneAreas\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgZoneAreas\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgTeams">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgTeams\OLE DB Source"
+          TopLeft="398,57" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgTeams\OLE DB Destination"
+          TopLeft="389,213" />
+        <EdgeLayout
+          Id="Package\StgTeams.Paths[OLE DB Source Output]"
+          TopLeft="473.75,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,114"
+              Start="0,0"
+              End="0,106.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,106.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgTeams\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgTeams\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
