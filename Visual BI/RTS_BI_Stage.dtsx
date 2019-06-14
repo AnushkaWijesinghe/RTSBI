@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="RTS_BI_Stage"
   DTS:PackageType="5"
-  DTS:VersionBuild="99"
-  DTS:VersionGUID="{FAB18CC1-6DBB-43C9-9A54-ECD23B9DC365}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{48058464-3BAD-4F8F-8BE8-9259DB932930}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAlXjGa9vXSzu2D85JzPQ2JAAAAAASAAACgAAAAEAAAACf180IpkRnJYVAp1ZN+EjgQAAAAR1NcX0oJ3V8ZHn/mcqt0XxQAAADwedFmW2MyLPNRfvN27s8urItsUA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABB6yVW4rBTkzHbhP1Wh6U5AAAAAASAAACgAAAAEAAAAAB6v6ChWP3Bzx+6L1VJhUQQAAAAUDogvvL2uO6RuKvDqHtsHRQAAACv6LlLUrhEw27EiF41KlCcQtoEJg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAJFs8uo7m9z6ExKw3hGQFVAAAAAASAAACgAAAAEAAAACZES77rtZBaMcvwZTDiAN0QAAAA1JHTg1y3o7xpLGwAayW/rxQAAAAHVXovn3MQBN2aP65Uyo0MVLGkXg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACI4PHo46vB39qEe8kkSVGzAAAAAASAAACgAAAAEAAAAMVG3KVcQ44D2kVC01RBCfsQAAAAmv7a1ORrKVY4l4KS3pMMQhQAAAAQI571l+7K5Q47wJbfOjM8at6Mqw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABFgbDjgDqytKKj0NUJnkrmAAAAAASAAACgAAAAEAAAAGAYTOQ3TmryAU13rKS2vg0QAAAAE6WcZR/wBr7WtLp7737duxQAAABehD/9nSKV3rtSfd+3/Lb5iRBYvg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACuK1Eddvji7vwMz1I/UYEkAAAAAASAAACgAAAAEAAAANe6w8YZ4SWlIfBlf+37zqAQAAAA6I6MmLWaGcggpeO0giVFexQAAAD5+LrLRpaB9K4jzRZ7tm4aDSZtYQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABv95udp84fF1OvDqnVnrxzAAAAAASAAACgAAAAEAAAAK2PGryuSJuayL4Zd/a4VQcQAAAAZBPDWRo9gR9NdqMSN0YcdxQAAADB9LILI8BFN1MSGB/5W/KhQx9CAw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACeDu2q/7BX7HFYkir+fD5OAAAAAASAAACgAAAAEAAAALzH1jmo6ZAGgafrxVPeSVMQAAAA4zmzj0Ch/vrNdZ/e2Um0xhQAAADGyjrwii/nR6iwf6nPQ78egb6btw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -87,7 +87,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC9yp5k4vwy9PUDX1CVke0jAAAAAASAAACgAAAAEAAAABgSYXUo++rXx2BQL9PlO/IQAAAAiI+0K+CQuYT8Mslix5lUnhQAAABrMMMPF/gGbUXJvjj0T6DZwKSWaQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAPM3lS9XzvndCWbVjavbgiAAAAAASAAACgAAAAEAAAACtowKcSohn/PaL5tBQ/YbUQAAAA64FEEsfoTGFapB9jZMjpCBQAAADnOHiYwzvvkeiusIF4qDvbmRd1pQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8409,6 +8409,330 @@
               endId="Package\StgEmployeeDailyActivityDetails\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\StgEmployeeDailyActivityDetails\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\StgERPLotWiseCustomer"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2CC8768F-19BD-4ECD-A739-E03554D970A6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="StgERPLotWiseCustomer"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\StgERPLotWiseCustomer\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgERPLotWiseCustomer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VISUAL RTS STG]"
+                  connectionManagerRefId="Package.ConnectionManagers[VISUAL RTS STG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="18"
+                      cachedName="CustomerCode"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCode]"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductionID]"
+                      cachedDataType="i4"
+                      cachedName="ProductionID"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotID]"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionID]" />
+                    <inputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductionNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="ProductionNumber"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotNumber]"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionNumber]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotID]"
+                      dataType="i4"
+                      name="LotID" />
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotNumber]"
+                      dataType="wstr"
+                      length="12"
+                      name="LotNumber" />
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerCode]"
+                      dataType="wstr"
+                      length="18"
+                      name="CustomerCode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\StgERPLotWiseCustomer\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select distinct 
+[tblproduction].[ProductionID]
+,[ProductionNumber]
+,[tblCustomer].[CustomerCode]
+
+from tblproduction
+inner join tblproductionStage on tblproductionStage.ProductionID = tblproduction.ProductionID
+inner join  tblProductionStageDetail on tblProductionStageDetail.ProductionStageID = tblproductionStage.ProductionStageID 
+inner join tblProductionDetail on tblProductionDetail.ProductionStageDetailID = tblProductionStageDetail.ProductionStageDetailID
+inner join [tblOrderItemDetail] on [tblOrderItemDetail].[SOItemDetailID] = tblProductionDetail.[SOItemDetailRefID]
+inner join [tblOrderItem] on [tblOrderItem].[SOItemID] = [tblOrderItemDetail].[SOItemID]
+inner join [tblOrder] on [tblOrder].[SOID] = [tblOrderItem].[SOID]
+inner join [tblCustomer] on [tblCustomer].[CustomerID] = [tblOrder].[CustomerID]
+where tblProductionDetail.[SOItemDetailRefID] is not null
+and tblProductionStageDetail.StageItem = 1</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Marsylka ERP]"
+                  connectionManagerRefId="Package.ConnectionManagers[Marsylka ERP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductionID]"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionID]"
+                      name="ProductionID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductionNumber]"
+                      length="12"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductionNumber]"
+                      name="ProductionNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerCode]"
+                      length="18"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerCode]"
+                      name="CustomerCode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductionID]"
+                      dataType="i4"
+                      name="ProductionID" />
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductionNumber]"
+                      dataType="wstr"
+                      length="12"
+                      name="ProductionNumber" />
+                    <externalMetadataColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerCode]"
+                      dataType="wstr"
+                      length="18"
+                      name="CustomerCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductionID]"
+                      dataType="i4"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductionID]"
+                      name="ProductionID" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductionNumber]"
+                      dataType="wstr"
+                      length="12"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductionNumber]"
+                      name="ProductionNumber" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerCode]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CustomerCode]"
+                      name="CustomerCode" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\StgERPLotWiseCustomer.Paths[OLE DB Source Output]"
+              endId="Package\StgERPLotWiseCustomer\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\StgERPLotWiseCustomer\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -32496,7 +32820,7 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4C3FF3AB-4832-4CDC-B7F7-2484F8AF89FB}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes&#xA;TRUNCATE TABLE StgTeams&#xA;TRUNCATE TABLE StgERPStage&#xA;TRUNCATE TABLE StgWorkRecords&#xA;TRUNCATE TABLE StgBundleDetails&#xA;TRUNCATE TABLE StgLineLocationDetails&#xA;TRUNCATE TABLE StgTypes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes&#xA;TRUNCATE TABLE StgTeams&#xA;TRUNCATE TABLE StgERPStage&#xA;TRUNCATE TABLE StgWorkRecords&#xA;TRUNCATE TABLE StgBundleDetails&#xA;TRUNCATE TABLE StgLineLocationDetails&#xA;TRUNCATE TABLE StgTypes&#xA;TRUNCATE TABLE StgERPLotWiseSO&#xA;TRUNCATE TABLE StgERPLotWiseCustomer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -32716,6 +33040,15 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 27"
       DTS:To="Package\StgType"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 28]"
+      DTS:CreationName=""
+      DTS:DTSID="{AF3131DE-575A-4EC6-BE86-71FF322E139F}"
+      DTS:From="Package\StgType"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 28"
+      DTS:To="Package\StgERPLotWiseCustomer"
       DTS:Value="2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
@@ -33884,6 +34217,34 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-64.554453125,5,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\StgERPLotWiseCustomer"
+          TopLeft="311,1028" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 28]"
+          TopLeft="580,1047.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-74,0"
+              Start="0,0"
+              End="-66.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-66.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.554453125,5,50.60890625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -36038,7 +36399,7 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
     design-time-name="Package\StgType">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="124,42"
           Id="Package\StgType\RTS Type"
@@ -36066,13 +36427,70 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\StgERPLotWiseCustomer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgERPLotWiseCustomer\OLE DB Source"
+          TopLeft="385,63" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgERPLotWiseCustomer\OLE DB Destination"
+          TopLeft="378,202" />
+        <EdgeLayout
+          Id="Package\StgERPLotWiseCustomer.Paths[OLE DB Source Output]"
+          TopLeft="461.75,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,97"
+              Start="0,0"
+              End="0,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgERPLotWiseCustomer\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgERPLotWiseCustomer\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
