@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="RTS_BI_Stage"
   DTS:PackageType="5"
-  DTS:VersionBuild="108"
-  DTS:VersionGUID="{48058464-3BAD-4F8F-8BE8-9259DB932930}">
+  DTS:VersionBuild="112"
+  DTS:VersionGUID="{89DD2614-0DC1-4A0C-9B91-E887A5FF270D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABB6yVW4rBTkzHbhP1Wh6U5AAAAAASAAACgAAAAEAAAAAB6v6ChWP3Bzx+6L1VJhUQQAAAAUDogvvL2uO6RuKvDqHtsHRQAAACv6LlLUrhEw27EiF41KlCcQtoEJg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAao8gtZ0PArJSToingfq7BAAAAAASAAACgAAAAEAAAAK6iavQBsqvlFXS3UhvX2egQAAAAN+yeRGKUwuU5LaYGyCd+lxQAAADq1d0MUhM2g0dv7r5ZxX4+UK1tmg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACI4PHo46vB39qEe8kkSVGzAAAAAASAAACgAAAAEAAAAMVG3KVcQ44D2kVC01RBCfsQAAAAmv7a1ORrKVY4l4KS3pMMQhQAAAAQI571l+7K5Q47wJbfOjM8at6Mqw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAjVErr9QdHonhQggANPEB+AAAAAASAAACgAAAAEAAAADsCU4oDu6N+WvUhhZMdWKMQAAAAxo3V7Qb/nvFAYqe4/jWKjRQAAABDMp/97DU2x6i7Igq6yillBvExug</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACuK1Eddvji7vwMz1I/UYEkAAAAAASAAACgAAAAEAAAANe6w8YZ4SWlIfBlf+37zqAQAAAA6I6MmLWaGcggpeO0giVFexQAAAD5+LrLRpaB9K4jzRZ7tm4aDSZtYQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACaE67P1/nKPyDApiLNQteWAAAAAASAAACgAAAAEAAAAAvdTSnYxS7YeR7L5ESc2xwQAAAARzO7t3wE4YIOKk3E/thvLxQAAAALzoU6LIwH5vVNPjx5Z/ODzQQ+pA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACeDu2q/7BX7HFYkir+fD5OAAAAAASAAACgAAAAEAAAALzH1jmo6ZAGgafrxVPeSVMQAAAA4zmzj0Ch/vrNdZ/e2Um0xhQAAADGyjrwii/nR6iwf6nPQ78egb6btw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADX8DpssWHpgQ8z1vNpciSVAAAAAASAAACgAAAAEAAAALpeE8XIJlUHyAgZLG2jdX4QAAAA3G8OFisdAO9Ds5KP7nTmjhQAAAC4M1PncIGLr2ORn2LMDgZ6vlJr1g</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -87,13 +87,909 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAPM3lS9XzvndCWbVjavbgiAAAAAASAAACgAAAAEAAAACtowKcSohn/PaL5tBQ/YbUQAAAA64FEEsfoTGFapB9jZMjpCBQAAADnOHiYwzvvkeiusIF4qDvbmRd1pQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATOlMj9hTC0WXNlymivjLtwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADkw8metVrPURTlNT3nX9w8AAAAAASAAACgAAAAEAAAAAd18rqh2TWBab82C/H8i1MQAAAAftDhxBVrnZ3CvWYGsd0dRxQAAAD0Y2kQ2bz1ORsxIsZUps/wOM0hvg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\StgBundleCreation"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0E52B140-40AB-40FC-A480-7EACBE4A55D5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="StgBundleCreation"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\StgBundleCreation\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StgBundleCreations]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgBundleCreation\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VISUAL RTS STG]"
+                  connectionManagerRefId="Package.ConnectionManagers[VISUAL RTS STG]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsActive]"
+                      cachedDataType="bool"
+                      cachedName="IsActive"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreatedTimeAPP]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedTimeAPP"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedTimeAPP]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LastModifiedTimeAPP]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastModifiedTimeAPP"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModifiedTimeAPP]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DeleteTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DeleteTime"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeleteTime]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SysGuid]"
+                      cachedDataType="guid"
+                      cachedName="SysGuid"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SysGuid]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LineOrder]"
+                      cachedDataType="i4"
+                      cachedName="LineOrder"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineOrder]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineOrder]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LineId]"
+                      cachedDataType="i4"
+                      cachedName="LineId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CellId]"
+                      cachedDataType="i4"
+                      cachedName="CellId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CellId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CellId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LotId]"
+                      cachedDataType="i4"
+                      cachedName="LotId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LotId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ErpStageId]"
+                      cachedDataType="i4"
+                      cachedName="ErpStageId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ErpStageId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ErpStageId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StageId]"
+                      cachedDataType="i4"
+                      cachedName="StageId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StageId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StageId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WorkCycleId]"
+                      cachedDataType="i4"
+                      cachedName="WorkCycleId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkCycleId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WorkCycleDetailId]"
+                      cachedDataType="i4"
+                      cachedName="WorkCycleDetailId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkCycleDetailId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleDetailId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WorkOrderDetailId]"
+                      cachedDataType="i4"
+                      cachedName="WorkOrderDetailId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkOrderDetailId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkOrderDetailId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalQty]"
+                      cachedDataType="i4"
+                      cachedName="TotalQty"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalQty]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalQty]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DefaultQty]"
+                      cachedDataType="i4"
+                      cachedName="DefaultQty"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefaultQty]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultQty]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RuleId]"
+                      cachedDataType="i4"
+                      cachedName="RuleId"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RuleId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[RuleId]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StartsAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="StartsAt"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartsAt]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartsAt]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndsAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EndsAt"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndsAt]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndsAt]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsStageLevel]"
+                      cachedDataType="bool"
+                      cachedName="IsStageLevel"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsStageLevel]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsStageLevel]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ReCreateBundle]"
+                      cachedDataType="bool"
+                      cachedName="ReCreateBundle"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReCreateBundle]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ReCreateBundle]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DefaultActivated]"
+                      cachedDataType="bool"
+                      cachedName="DefaultActivated"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefaultActivated]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultActivated]" />
+                    <inputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsRebundleForDamage]"
+                      cachedDataType="bool"
+                      cachedName="IsRebundleForDamage"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRebundleForDamage]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsRebundleForDamage]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineOrder]"
+                      dataType="i4"
+                      name="LineOrder" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LineId]"
+                      dataType="i4"
+                      name="LineId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CellId]"
+                      dataType="i4"
+                      name="CellId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LotId]"
+                      dataType="i4"
+                      name="LotId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ErpStageId]"
+                      dataType="i4"
+                      name="ErpStageId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StageId]"
+                      dataType="i4"
+                      name="StageId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkCycleId]"
+                      dataType="i4"
+                      name="WorkCycleId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkCycleDetailId]"
+                      dataType="i4"
+                      name="WorkCycleDetailId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WorkOrderDetailId]"
+                      dataType="i4"
+                      name="WorkOrderDetailId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalQty]"
+                      dataType="i4"
+                      name="TotalQty" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefaultQty]"
+                      dataType="i4"
+                      name="DefaultQty" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RuleId]"
+                      dataType="i4"
+                      name="RuleId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartsAt]"
+                      dataType="dbTimeStamp"
+                      name="StartsAt" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndsAt]"
+                      dataType="dbTimeStamp"
+                      name="EndsAt" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsStageLevel]"
+                      dataType="bool"
+                      name="IsStageLevel" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReCreateBundle]"
+                      dataType="bool"
+                      name="ReCreateBundle" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefaultActivated]"
+                      dataType="bool"
+                      name="DefaultActivated" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsRebundleForDamage]"
+                      dataType="bool"
+                      name="IsRebundleForDamage" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\StgBundleCreation\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\StgBundleCreation\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[BundleCreations]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\StgBundleCreation\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VISUAL RTS]"
+                  connectionManagerRefId="Package.ConnectionManagers[VISUAL RTS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsActive]"
+                      name="IsActive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreatedTimeAPP]"
+                      name="CreatedTimeAPP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastModifiedTimeAPP]"
+                      name="LastModifiedTimeAPP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DeleteTime]"
+                      name="DeleteTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[SysGuid]"
+                      name="SysGuid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineOrder]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LineOrder]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineOrder]"
+                      name="LineOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LineId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LineId]"
+                      name="LineId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CellId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CellId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[CellId]"
+                      name="CellId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LotId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LotId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[LotId]"
+                      name="LotId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ErpStageId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ErpStageId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ErpStageId]"
+                      name="ErpStageId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StageId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StageId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StageId]"
+                      name="StageId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkCycleId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleId]"
+                      name="WorkCycleId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleDetailId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkCycleDetailId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkCycleDetailId]"
+                      name="WorkCycleDetailId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkOrderDetailId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkOrderDetailId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[WorkOrderDetailId]"
+                      name="WorkOrderDetailId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalQty]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[TotalQty]"
+                      name="TotalQty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultQty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefaultQty]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultQty]"
+                      name="DefaultQty"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[RuleId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RuleId]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[RuleId]"
+                      name="RuleId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartsAt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StartsAt]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[StartsAt]"
+                      name="StartsAt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndsAt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndsAt]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndsAt]"
+                      name="EndsAt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsStageLevel]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsStageLevel]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsStageLevel]"
+                      name="IsStageLevel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ReCreateBundle]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ReCreateBundle]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[ReCreateBundle]"
+                      name="ReCreateBundle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultActivated]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefaultActivated]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefaultActivated]"
+                      name="DefaultActivated"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsRebundleForDamage]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsRebundleForDamage]"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsRebundleForDamage]"
+                      name="IsRebundleForDamage"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsActive]"
+                      dataType="bool"
+                      name="IsActive" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedTimeAPP" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      name="DeleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SysGuid]"
+                      dataType="guid"
+                      name="SysGuid" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LineOrder]"
+                      dataType="i4"
+                      name="LineOrder" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LineId]"
+                      dataType="i4"
+                      name="LineId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CellId]"
+                      dataType="i4"
+                      name="CellId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LotId]"
+                      dataType="i4"
+                      name="LotId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ErpStageId]"
+                      dataType="i4"
+                      name="ErpStageId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StageId]"
+                      dataType="i4"
+                      name="StageId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkCycleId]"
+                      dataType="i4"
+                      name="WorkCycleId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkCycleDetailId]"
+                      dataType="i4"
+                      name="WorkCycleDetailId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[WorkOrderDetailId]"
+                      dataType="i4"
+                      name="WorkOrderDetailId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TotalQty]"
+                      dataType="i4"
+                      name="TotalQty" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefaultQty]"
+                      dataType="i4"
+                      name="DefaultQty" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RuleId]"
+                      dataType="i4"
+                      name="RuleId" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StartsAt]"
+                      dataType="dbTimeStamp"
+                      name="StartsAt" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndsAt]"
+                      dataType="dbTimeStamp"
+                      name="EndsAt" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsStageLevel]"
+                      dataType="bool"
+                      name="IsStageLevel" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ReCreateBundle]"
+                      dataType="bool"
+                      name="ReCreateBundle" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefaultActivated]"
+                      dataType="bool"
+                      name="DefaultActivated" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsRebundleForDamage]"
+                      dataType="bool"
+                      name="IsRebundleForDamage" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BundelMappingStr]"
+                      dataType="nText"
+                      name="BundelMappingStr" />
+                    <externalMetadataColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductDetailStr]"
+                      dataType="nText"
+                      name="ProductDetailStr" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      dataType="bool"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsActive]"
+                      name="IsActive" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreatedTimeAPP]"
+                      name="CreatedTimeAPP" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastModifiedTimeAPP]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastModifiedTimeAPP]"
+                      name="LastModifiedTimeAPP" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeleteTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DeleteTime]"
+                      name="DeleteTime" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SysGuid]"
+                      dataType="guid"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SysGuid]"
+                      name="SysGuid" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LineOrder]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LineOrder]"
+                      name="LineOrder" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LineId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LineId]"
+                      name="LineId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CellId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CellId]"
+                      name="CellId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LotId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LotId]"
+                      name="LotId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErpStageId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErpStageId]"
+                      name="ErpStageId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StageId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StageId]"
+                      name="StageId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkCycleId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkCycleId]"
+                      name="WorkCycleId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkCycleDetailId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkCycleDetailId]"
+                      name="WorkCycleDetailId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkOrderDetailId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[WorkOrderDetailId]"
+                      name="WorkOrderDetailId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TotalQty]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TotalQty]"
+                      name="TotalQty" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefaultQty]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefaultQty]"
+                      name="DefaultQty" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RuleId]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RuleId]"
+                      name="RuleId" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StartsAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StartsAt]"
+                      name="StartsAt" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndsAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndsAt]"
+                      name="EndsAt" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsStageLevel]"
+                      dataType="bool"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsStageLevel]"
+                      name="IsStageLevel" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ReCreateBundle]"
+                      dataType="bool"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ReCreateBundle]"
+                      name="ReCreateBundle" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefaultActivated]"
+                      dataType="bool"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefaultActivated]"
+                      name="DefaultActivated" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsRebundleForDamage]"
+                      dataType="bool"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IsRebundleForDamage]"
+                      name="IsRebundleForDamage" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\StgBundleCreation.Paths[OLE DB Source Output]"
+              endId="Package\StgBundleCreation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\StgBundleCreation\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\StgBundleDetails"
       DTS:CreationName="Microsoft.Pipeline"
@@ -32820,7 +33716,7 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4C3FF3AB-4832-4CDC-B7F7-2484F8AF89FB}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes&#xA;TRUNCATE TABLE StgTeams&#xA;TRUNCATE TABLE StgERPStage&#xA;TRUNCATE TABLE StgWorkRecords&#xA;TRUNCATE TABLE StgBundleDetails&#xA;TRUNCATE TABLE StgLineLocationDetails&#xA;TRUNCATE TABLE StgTypes&#xA;TRUNCATE TABLE StgERPLotWiseSO&#xA;TRUNCATE TABLE StgERPLotWiseCustomer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE StgProducts&#xA;TRUNCATE TABLE StgProductDetails&#xA;TRUNCATE TABLE StgProductionDetails&#xA;TRUNCATE TABLE StgProductions&#xA;TRUNCATE TABLE StgProductOperationDetails&#xA;TRUNCATE TABLE StgWorkflows&#xA;TRUNCATE TABLE StgWorkflowDetails&#xA;TRUNCATE TABLE StgWorkOperationDetails&#xA;TRUNCATE TABLE StgWorkOperationHeaders&#xA;TRUNCATE TABLE StgWorkOrderDetails&#xA;TRUNCATE TABLE StgBundles&#xA;TRUNCATE TABLE StgBundlePlannings&#xA;TRUNCATE TABLE StgLineMachineDetails&#xA;TRUNCATE TABLE StgLineTeamDetails&#xA;TRUNCATE TABLE StgZoneAreas&#xA;TRUNCATE TABLE StgEmployeeDailyActivities&#xA;TRUNCATE TABLE StgEmployeeDailyActivityDetails&#xA;TRUNCATE TABLE StgLineEmployeeDetails&#xA;TRUNCATE TABLE StgOperationLibraries&#xA;TRUNCATE TABLE StgLineOperationDetails&#xA;TRUNCATE TABLE StgCities&#xA;TRUNCATE TABLE StgCountries&#xA;TRUNCATE TABLE StgEmployees&#xA;TRUNCATE TABLE StgLines&#xA;TRUNCATE TABLE StgLocationDetails&#xA;TRUNCATE TABLE StgMachineDetails&#xA;TRUNCATE TABLE StgMachines&#xA;TRUNCATE TABLE StgMachineTypeDetails&#xA;TRUNCATE TABLE StgMachineTypes&#xA;TRUNCATE TABLE StgOperations&#xA;TRUNCATE TABLE StgOperationTypes&#xA;TRUNCATE TABLE StgTeams&#xA;TRUNCATE TABLE StgERPStage&#xA;TRUNCATE TABLE StgWorkRecords&#xA;TRUNCATE TABLE StgBundleDetails&#xA;TRUNCATE TABLE StgLineLocationDetails&#xA;TRUNCATE TABLE StgTypes&#xA;TRUNCATE TABLE StgERPLotWiseCustomer&#xA;TRUNCATE TABLE StgBundleCreations" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -33049,6 +33945,15 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 28"
       DTS:To="Package\StgERPLotWiseCustomer"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 29]"
+      DTS:CreationName=""
+      DTS:DTSID="{E982716D-4FC3-4EF1-A7D9-0D0EC73F74D3}"
+      DTS:From="Package\StgERPLotWiseCustomer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 29"
+      DTS:To="Package\StgBundleCreation"
       DTS:Value="2" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
@@ -34245,6 +35150,34 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-58.554453125,5,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\StgBundleCreation"
+          TopLeft="85,1030" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 29]"
+          TopLeft="311,1050">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-60,0"
+              Start="0,0"
+              End="-52.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-52.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-51.554453125,5,50.60890625,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -36481,6 +37414,70 @@ from [MarsylkaSL_RTS_DEMO_0507].[dbo].[WorkRecords]
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\StgERPLotWiseCustomer\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StgBundleCreation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\StgBundleCreation\OLE DB Source"
+          TopLeft="393,81" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\StgBundleCreation\OLE DB Destination"
+          TopLeft="386,234" />
+        <EdgeLayout
+          Id="Package\StgBundleCreation.Paths[OLE DB Source Output]"
+          TopLeft="469.75,123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111"
+              Start="0,0"
+              End="0,103.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgBundleCreation\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StgBundleCreation\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
